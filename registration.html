@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account —Kwait_Real_Estate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <section class="registration">
+    <div class="animated-bg"></div>
+    <div class="overlay"></div>
+
+    <div class="register-card">
+      <!-- زر الباك في الأعلى -->
+      <button type="button" class="btn btn--dark back-btn" onclick="goBack()">← Back</button>
+
+      <h2>Create Account</h2>
+      <form id="registerForm" class="contact-form">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <!-- كلمة المرور مع زر إظهار/إخفاء -->
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+        </div>
+
+        <!-- تأكيد كلمة المرور مع زر إظهار/إخفاء -->
+        <div class="password-field">
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+          <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+        </div>
+
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <button type="submit" class="btn btn--primary">Register</button>
+        <p class="login-text">Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // التحقق من الحقول وكلمة المرور
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!name || !email || !password || !confirmPassword || !phone) {
+        alert("Please fill in all fields.");
+        return;
+      }
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      alert("Account created successfully!");
+    });
+
+    // زر الرجوع للخلف
+    function goBack() {
+      window.history.back();
+    }
+
+    // إظهار/إخفاء كلمة المرور
+    function togglePassword(fieldId) {
+      const input = document.getElementById(fieldId);
+      if (input.type === "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>

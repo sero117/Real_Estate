@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — Kwait_Real_Estate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <section class="registration">
+    <div class="animated-bg"></div>
+    <div class="overlay"></div>
+
+    <div class="register-card">
+      <!-- زر الباك في الأعلى -->
+      <button type="button" class="btn btn--dark back-btn" onclick="goBack()">← Back</button>
+
+      <h2>Login</h2>
+      <form id="loginForm" class="contact-form">
+        <input type="email" id="loginEmail" placeholder="Email Address" required>
+
+        <!-- كلمة المرور مع زر إظهار/إخفاء -->
+        <div class="password-field">
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Login</button>
+        <p class="login-text">Don't have an account? <a href="registration.html">Register</a></p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // التحقق من تسجيل الدخول
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      if (!email || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      alert("Login successful!");
+      // هنا يمكنك ربط تسجيل الدخول مع السيرفر
+    });
+
+    // زر الرجوع للخلف
+    function goBack() {
+      window.history.back();
+    }
+
+    // إظهار/إخفاء كلمة المرور
+    function togglePassword(fieldId) {
+      const input = document.getElementById(fieldId);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

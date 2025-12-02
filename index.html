@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kwait_Real_Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AppBar -->
+  <header class="appbar">
+    <div class="container appbar__content">
+      <div class="logo">Kwait_Real_Estate</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#properties">Properties</a>
+        <a href="#agents">Agents</a>
+      </nav>
+      <div class="actions">
+        <button class="btn btn--ghost" id="themeToggle" aria-label="Toggle theme">Dark</button>
+        <a href="properties.html" class="btn btn--primary">Find A House</a>      
+    </div>
+    <div class="fireflies" aria-hidden="true"></div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h1 class="hero__title">Find A House That Suits You</h1>
+        <p class="hero__desc">
+          Want to find a home? We are ready to help you find one that suits your lifestyle and needs.
+          From cozy apartments to luxury villas, we make your journey easy and enjoyable.
+        </p>
+        <div class="hero__cta">
+            <a href="registration.html" class="btn btn--dark">Get Started</a>        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">1200+</div>
+            <div class="stat__label">Listed Properties</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">4500+</div>
+            <div class="stat__label">Happy Customers</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">100+</div>
+            <div class="stat__label">Awards</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <!-- ضعي صورتك هنا -->
+        <img src="images/Home Construction Company in Bangalore.jpeg" alt="Modern house — hero image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section id="search" class="search">
+    <div class="container">
+      <div class="search__bar">
+        <div class="field">
+          <label for="location">Location</label>
+          <input id="location" type="text" placeholder="e.g., Lagos">
+        </div>
+        <div class="field">
+          <label for="type">Property Type</label>
+          <select id="type">
+            <option value="">Any</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="land">Land</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Budget</label>
+          <input id="budget" type="number" placeholder="Max ₦" min="0">
+        </div>
+        <button id="searchBtn" class="btn btn--primary">Search Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Properties -->
+  <section id="properties" class="popular">
+    <div class="container">
+      <div class="popular__head">
+        <h2 class="section__title">Our Popular Homes</h2>
+        <p class="section__desc">Carefully selected properties that balance comfort, location, and value.</p>
+      </div>
+
+      <div class="cards" id="popularList">
+        <!-- Card 1 -->
+        <article class="card" data-city="Lagos" data-name="Banana Island" data-type="villa" data-price="100000000">
+          <div class="card__image">
+           
+            <img src="images/The luxury of Banana Island Resort Doha by Anantara.jpeg" alt="Banana Island, Lagos">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Banana Island, Lagos</h3>
+            <ul class="card__specs">
+              <li><strong>Bed:</strong> 4</li>
+              <li><strong>Lot:</strong> 10x10 m</li>
+              <li><strong>Area:</strong> 1600 m²</li>
+            </ul>
+            <div class="card__price">₦100,000,000</div>
+            <button class="btn btn--dark card__action">Book Now</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-city="Lagos" data-name="Parkview Estate" data-type="villa" data-price="200000000">
+          <div class="card__image">
+            <img src="images/Serene park - Residential neighborhood ambiance_ - aru gupta (1).jpeg" alt="Parkview Estate, Lagos">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Parkview Estate, Lagos</h3>
+            <ul class="card__specs">
+              <li><strong>Bed:</strong> 5</li>
+              <li><strong>Lot:</strong> 10x10 m</li>
+              <li><strong>Area:</strong> 1600 m²</li>
+            </ul>
+            <div class="card__price">₦200,000,000</div>
+            <button class="btn btn--dark card__action">Book Now</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-city="Lagos" data-name="Eko Atlantic" data-type="apartment" data-price="500000000">
+          <div class="card__image">
+            <img src="images/Lagos hotel view.jpeg" alt="Eko Atlantic, Lagos">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Eko Atlantic, Lagos</h3>
+            <ul class="card__specs">
+              <li><strong>Bed:</strong> 3</li>
+              <li><strong>Lot:</strong> 10x10 m</li>
+              <li><strong>Area:</strong> 1600 m²</li>
+            </ul>
+            <div class="card__price">₦500,000,000</div>
+            <button class="btn btn--dark card__action">Book Now</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section id="about" class="testimonial">
+    <div class="container testimonial__grid">
+      <div class="testimonial__quote">
+        <blockquote>
+          “Our business is built off of close relationships and we are glad that we are able to share our positive real estate experiences with our clients.”
+        </blockquote>
+        <div class="testimonial__author">
+          <img src="images/download (3).jpeg" alt="Founder portrait">
+          <div>
+            <div class="author__name">Kevin Durant</div>
+            <div class="author__role">Founder of Kwait_Real_Estate</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial__image">
+        <!-- ضعي صورة إضافية هنا إن رغبتِ -->
+        <img src="images/Join us in building a bright financial future_ ➦ +1 (646) 535-3995.jpeg" alt="Client relations">
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners">
+    <div class="container partners__row">
+      <img src="images/Equinox and SoulCycle to require ALL customers, staff get vaccinated.jpeg" alt="Equinix logo">
+      <img src="images/realestate logo done by stag branding agency.jpeg" alt="Digital Realty logo">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo logo--light">Kwait_Real_Estate</div>
+        <p>Trusted real estate company helping you find homes that fit your lifestyle.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#about">About Us</a>
+        <a href="#agents">Agents</a>
+      </div>
+
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <div class="icons">
+          <a href="mailto:info@lamaison.com" aria-label="Email">
+            <span class="icon">✉️</span> info@lamaison.com
+          </a>
+          <a href="#" aria-label="Facebook">
+            <span class="icon">f</span> facebook.com/lamaison
+          </a>
+          <a href="#" aria-label="Instagram">
+            <span class="icon">⌁</span> instagram.com/lamaison
+          </a>
+          <a href="#" aria-label="Twitter">
+            <span class="icon">𝕏</span> twitter.com/lamaison
+          </a>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="cfName" placeholder="Your Name" required>
+          <input type="email" id="cfEmail" placeholder="Your Email" required>
+          <textarea id="cfMessage" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Kwait_Real_Estate. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
